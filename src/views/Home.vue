@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div v-show="showAddTask">
-      <AddTask @add-task="addTask" />
-    </div>
+    <AddTask v-show="showAddTask" @add-task="addTask" />
     <Tasks
       @toggle-reminder="toggleReminder"
       @delete-task="deleteTask"
@@ -69,7 +67,7 @@ export default {
       const data = await res.json();
 
       this.tasks = this.tasks.map((task) =>
-        task.id === id ? { ...task, reminder: !data.reminder } : task
+        task.id === id ? { ...task, reminder: data.reminder } : task
       );
     },
     async fetchTasks() {
