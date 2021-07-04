@@ -17,6 +17,12 @@
       "text": "Food Shopping",
       "day": "May 7th at 12: 30pm",
       "reminder": false
+    },
+    {
+      "text": "My Favorite Thing",
+      "day": "Tomorrow @ 12",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
